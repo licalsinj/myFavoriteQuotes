@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+  	<% include templates/header.ejs%>
+    <h1><%= title %></h1>
+    <p>Add a Quote Here</p>
+    <p>Your Quote is: <%= status %></p>
+    <form action="/add" method="post">
+    	<label for="quote">Enter quote: </label>
+    	<input id="quote" type="text" name="quote" value="May the force be with you"><br>
+    	<label for="speaker">Enter speaker: </label>
+    	<input id="speaker" type="text" name="speaker" value="Yoda">
+    	<input type="submit" value="OK">
+    </form>
+    <h5>What I got:</h5>
+    <p>
+   		Quote: <%= quote_recieved %>   	<br>
+    	Speaker: <%= speaker_recieved  %>   	<br>
+    </p>
+  </body>
+</html>
